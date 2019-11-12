@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func woff(_ sender: Any) {
+        
+        let speechUtterance = AVSpeechUtterance(string: "woof")
+        let synthesizer = AVSpeechSynthesizer()
+        
+//        speechUtterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
+        synthesizer.speak(speechUtterance)
 
+    }
+    
 }
 
